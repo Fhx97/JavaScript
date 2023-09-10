@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // switch case语句一般用于等值判断，不适合于区间判断
+    // switch case一般需要配合break关键字使用，没有break会造成case穿透
+    // 若没有 === 则执行default里的代码
+    let a = +prompt('请输入第一个数：')
+    let b = +prompt('请输入第二个是：')
+    let c = prompt('请输入运算符号：')
+    switch (c) {
+      case '+':
+        alert(`两个数的和为：${a + b}`)
+        break;
+      case '-':
+        alert(`两个数的差为：${a - b}`)
+        break;
+      case '*':
+        alert(`两个数的积为：${a * b}`)
+        break;
+      case '/':
+        alert(`两个数的商为：${a / b}`)
+        break;
+      default:
+        alert(`请输入正确的运算符号！`)
+    }
+  </script>
+</body>
+
+</html>

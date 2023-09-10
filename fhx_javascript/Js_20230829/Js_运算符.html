@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 比较运算符有隐式转换的功能
+    // 双等号 只判断值
+    // 三等号 全等判断（值和数据类型）判断一般都用这个
+    console.log(2 === '2')
+    // NaN 不等于任何值，包括它本身
+    console.log(NaN === NaN)
+    // &&逻辑与 ||逻辑或 !逻辑非
+    let num = +prompt('请输入一个数：')
+    alert(num % 100 === 0)
+  </script>
+</body>
+
+</html>
