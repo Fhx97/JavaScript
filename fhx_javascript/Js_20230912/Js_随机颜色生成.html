@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 自定义一个随机颜色函数，若干flag为true则为16进制颜色，为false则为rgb颜色
+    // 16进制颜色格式为 '#ffffff' 其中f可以是任意0-f之间的字符，需要用到数字
+    let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+    // rgb 颜色格式为 'rgb(255,255,255)' 其中255可以是任意0-255之间的数字
+    function getRandomColor(flag) {
+      if (flag) {
+        let str = '#'
+        for (let i = 1; i <= 6; i++) {
+          let random = Math.floor(Math.random() * arr.length)
+          str = str + arr[random]
+        }
+        return str
+
+      } else {
+        let r = Math.floor(Math.random() * 256)
+        let g = Math.floor(Math.random() * 256)
+        let b = Math.floor(Math.random() * 256)
+        return `rgb(${r},${g},${b})`
+      }
+    }
+    console.log(getRandomColor(true))
+    console.log(getRandomColor(false))
+  </script>
+</body>
+
+</html>
